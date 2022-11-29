@@ -1,0 +1,135 @@
+body, * {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: whitesmoke;
+} 
+#navbar {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: #C4093F;
+  top: 0;
+}
+#navbar div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  height: 80px;
+  align-items: center;
+  margin-right: 0.5rem
+}
+#navbar a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#welcome-section {
+  background-color: rgb(56, 52, 52);
+  width: 100%;
+  height: calc(100vh - 80px);
+  margin: 80px 0px 0px;
+}
+#welcome-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#welcome-section h3 {
+  color: red;
+  font-size: 2rem;
+  font-weight: lighter;
+  font-style: italic;
+}
+#projects-section {
+  background-color: rgb(91, 91, 133);
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+}  
+#section-title {
+  width: 600px;
+  border-bottom: 3px solid white;
+  margin: 0px auto;
+}
+#section-title h2 {
+  color: white;
+  text-align: center;
+  font-size: 2.2rem;
+  padding: 3rem 0rem 1rem;
+}
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: -6rem auto 0rem;
+  justify-items: center;
+  height: 100vh;
+  align-items: center;
+  gap: 1rem;
+}
+.project-link {
+  width: 400px;
+  height: 4rem;
+  background-color: #28333f;
+  text-align: center;
+  line-height: 4rem;
+}
+.project-link a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+}
+.project-link a:hover::before {
+  content: '< ';
+}
+.project-link a:hover::after {
+  content: ' />';
+}
+.project-link a:hover::before, .project-link a:hover::after {
+  color: rgb(122, 60, 60);
+  font-weight: bolder;
+  font-size: 1rem;
+}
+#contact-section {
+  background-color: rgb(56, 52, 52);
+  width: 100%;
+  height: 50vh;
+}
+#contact-section div {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+#contact-section a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.2rem;
+}
+span {
+  transition: 0.3s;
+}
+#contact-section span:hover {
+  transform: translate(0, -10px);
+}
+@media (max-width:700px) {
+  #projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0rem auto;
+  }
+  #section-title h2 {
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 0;
+  }
+}
